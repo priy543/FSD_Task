@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Text Change Example</title>
+    <style>
+        body{
+            background-color: lightyellow;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding-top: 100px;
+        }
+
+        h1{
+            color: darkred;
+        }
+
+        #demo{
+            font-size: 22px;
+            color: blue;
+            margin: 20px;
+        }
+
+        button{
+            background-color: orange;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Change Text Using DOM</h1>
+
+    <p id="demo">This is the original text.</p>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML =
+            "The text has been changed successfully using JavaScript DOM!";
+        }
+    </script>
+
+</body>
+</html>
