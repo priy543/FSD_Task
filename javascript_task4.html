@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Validation</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align:center;
+            margin-top:60px;
+        }
+
+        .container{
+            width:450px;
+            margin:auto;
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+        }
+
+        textarea{
+            width:90%;
+            height:100px;
+            padding:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#2196F3;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        #message{
+            margin-top:15px;
+            font-size:18px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Feedback Form</h2>
+
+    <p>Please provide your feedback.</p>
+
+    <textarea id="feedback" placeholder="Enter your feedback"></textarea>
+    <br><br>
+
+    <button id="submitBtn">Submit Feedback</button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+    const btn = document.getElementById("submitBtn");
+
+    btn.addEventListener("click", function(){
+
+        let feedback = document.getElementById("feedback").value.trim();
+        let message = document.getElementById("message");
+
+        if(feedback === ""){
+            alert("Feedback cannot be empty");
+            message.innerHTML = "Please enter feedback.";
+            message.style.color = "red";
+        }
+        else if(feedback.length < 10){
+            alert("Feedback is too short");
+            message.innerHTML = "Minimum 10 characters required.";
+            message.style.color = "orange";
+        }
+        else{
+            alert("Feedback Submitted Successfully");
+            message.innerHTML = "Thank you for your feedback!";
+            message.style.color = "green";
+        }
+    });
+
+</script>
+
+</body>
+</html>

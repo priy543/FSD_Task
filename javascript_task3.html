@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            text-align:center;
+            margin-top:80px;
+        }
+
+        .container{
+            width:450px;
+            margin:auto;
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+        }
+
+        button{
+            padding:10px 20px;
+            background:green;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        #message{
+            margin-top:15px;
+            font-size:18px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Profile</h2>
+
+    <p>Click the button to view student details.</p>
+
+    <button id="showBtn">Show Details</button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+    const btn = document.getElementById("showBtn");
+
+    btn.addEventListener("click", function(){
+        document.getElementById("message").innerHTML =
+        "Name: Priya <br> Department: AI <br> Year: III";
+    });
+</script>
+
+</body>
+</html>
