@@ -1,0 +1,123 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration Form</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:linear-gradient(to right,#6dd5ed,#2193b0);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            background:white;
+            width:350px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h2{
+            text-align:center;
+            color:#2193b0;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input[type="text"],
+        input[type="email"]{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            box-sizing:border-box;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#28a745;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#218838;
+        }
+    </style>
+
+    <script>
+        function registerUser() {
+
+            document.body.innerHTML = `
+            <div style="
+                background:linear-gradient(to right,#11998e,#38ef7d);
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                font-family:Arial,sans-serif;
+            ">
+                <div style="
+                    background:white;
+                    padding:40px;
+                    border-radius:15px;
+                    box-shadow:0 0 15px rgba(0,0,0,0.3);
+                    text-align:center;
+                    width:400px;
+                ">
+                    <h1 style="color:#28a745;">
+                        ✅ Registration Completed!
+                    </h1>
+
+                    <h3>Thank You for Registering</h3>
+
+                    <p>
+                        Your details have been submitted successfully.
+                    </p>
+                </div>
+            </div>
+            `;
+
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>User Registration Form</h2>
+
+        <form onsubmit="return registerUser()">
+
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email Address:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+```
